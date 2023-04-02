@@ -1,6 +1,13 @@
-<%= form_with(model: post) do |form| %>
+<%= form_with(
+  model: post, 
+  id: 'form',
+  class: "contents",
+  html: {
+    data: { controller: 'notice', action: 'submit->notice#clear' }
+  }
+) do |form| %>
   <% if post.errors.any? %>
-    <div style="color: red">
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
@@ -11,11 +18,19 @@
     </div>
   <% end %>
 
-  <div>
-    <div class="field">
+  <div class="inline">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+    <div class="my-5">
       <%= form.label :content %>
-      <%= form.rich_text_area :content %>
+      <%= form.rich_text_area :content, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     </div>
-    <%= form.submit %>
+
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
+
+<!-- fields  --->
+
 <% end %>

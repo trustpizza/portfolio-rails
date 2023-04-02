@@ -1,14 +1,14 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+<div class="flex-grow w-full flex flex-col justify-center items-center bg-gradient-to-br from-cyan-100 to-blue-100 p-4">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice%></p>
   <% end %>
-</div>
 
-<%= link_to "New post", new_post_path %>
+  <div class="flex-grow w-full bg-white flex flex-col items-center p-2 rounded-md dark:bg-gray-300 shadow">
+    <h1 class="font-bold text-3xl">Recent Posts</h1>
+    <div class="flex-grow flex flex-col justify-between p-4">
+      <div>Post1</div>
+      <div>Post2</div>
+      <div>Post3</div>
+    </div>
+  </div>
+</div>

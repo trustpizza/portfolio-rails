@@ -1,4 +1,14 @@
+@import 'actiontext.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'actiontext.css';
+
+.mountain {
+    background-image: url(background.jpg);
+}
+
+#headshot {
+    background-image: url(axel-2.png);
+}
+
