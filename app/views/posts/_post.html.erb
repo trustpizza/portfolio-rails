@@ -4,11 +4,6 @@
     <%= link_to 'Edit this post', edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
   <% end %>
-
-    <p class="my-5">
-       <%= @post.content %> 
-    </p>
-
   <article class="p-2 mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
           <header class="mb-4 lg:mb-6 not-format">
               <address class="flex items-center mb-6 not-italic">
@@ -24,19 +19,9 @@
               </address>
               <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"><%=post.title%></h1>
           </header>
-          <h2 class="font-bold">Seciton 1</h2>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem id ducimus quod nemo eveniet aperiam quisquam accusamus nobis aliquid mollitia facilis quam, veritatis dolorum laudantium blanditiis cupiditate nulla atque placeat. </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, at, laudantium culpa error itaque debitis saepe eos officia impedit voluptatibus adipisci incidunt. Exercitationem maiores enim non voluptas, recusandae harum fugit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aliquid, deserunt veniam reprehenderit adipisci pariatur quo aut ducimus cumque accusamus explicabo delectus soluta amet sint ipsam vero dolorum, hic illum!</p>
-          <figure class="flex flex-col justify-center items-center">
-              <img class="max-w-full h-auto w-96 h-52" src="" alt="">
-              <figcaption>Digital art by Anonymous</figcaption>
-          </figure>
-          <h2 class="font-bold">Section 2</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum praesentium saepe tempore error eaque nostrum, atque aperiam architecto eos dolor, aspernatur veritatis et recusandae laborum itaque id magnam corporis facere.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quibusdam quae quod ipsa. Sit ab facilis cumque quasi, exercitationem nobis dolore assumenda, aliquid dolor ipsam, ducimus quaerat accusantium et a!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsa reiciendis porro rem accusamus dolorem voluptas minus adipisci eum laudantium, dolore tenetur voluptates atque deleniti commodi suscipit. Cum, adipisci delectus?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis non ipsa, iure iusto quasi reprehenderit, veniam recusandae deleniti dolore laudantium at cumque inventore labore tenetur adipisci hic modi, amet eum.</p>
-          </section>
+
+          <div class="my-5">
+              <%= @post.content %> 
+          </div>
       </article>
 </div>
