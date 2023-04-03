@@ -1,4 +1,5 @@
 import github from "../images/github.svg"
+
 function linkFactory(name, url, image) {
     const li = document.createElement('li');
     
@@ -32,8 +33,8 @@ const linkList = document.createAttribute('ul');
 
 const githubLink = linkFactory("Github", "https://github.com/trustpizza", github)
 
-linkList.append(githubLink);
+//linkList.appendChild(githubLink);
 
-container.append(contactTextArea, linkList);
+//container.append(contactTextArea, linkList);
 
 export default container;
