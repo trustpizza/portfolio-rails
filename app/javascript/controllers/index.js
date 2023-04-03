@@ -2,10 +2,12 @@
 // Run that command whenever you add a new controller or create them with
 // ./bin/rails generate stimulus controllerName
 
-import { application } from "./application"
+import { Application } from '@hotwired/stimulus'
+import Dropdown from 'stimulus-dropdown'
+
+const application = Application.start()
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import FooterController from "./footer_controller"
-application.register("footer", FooterController);
+application.register("dropdown", Dropdown)
