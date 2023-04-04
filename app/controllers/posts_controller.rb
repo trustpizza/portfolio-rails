@@ -22,7 +22,8 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.create!(post_params)
-    @post.thumbnail.attach(params[:thumbnail])
+    @post.thumbnail.attach(post_params[:thumbnail])
+    # debugger
 
     respond_to do |format|
       if @post.save
