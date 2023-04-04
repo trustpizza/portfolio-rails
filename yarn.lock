@@ -321,7 +321,7 @@ esbuild-rails@^1.0.4:
 
 esbuild@^0.17.15:
   version "0.17.15"
-  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.17.15.tgz"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.17.15.tgz#209ebc87cb671ffb79574db93494b10ffaf43cbc"
   integrity sha512-LBUV2VsUIc/iD9ME75qhT4aJj0r75abCVS0jakhFzOtR7TQsqQA5w0tZ+KTKnwl3kXE0MhskNdHDh/I5aCR1Zw==
   optionalDependencies:
     "@esbuild/android-arm" "0.17.15"
