@@ -27,6 +27,11 @@
       <%= form.label :description %>
       <%= form.text_field :description, class: "border-2 flex-grow p-0.5" %>
     </div>
+    <div class="flex gap-2">
+      <%= form.label :thumbnail %>
+      <%= form.file_field :thumbnail %>
+    </div>
+
     <%= form.rich_text_area :content, class: "prose lg:prose-xl max-w-none flex-grow block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full flex-grow" %>
 
     <%= form.submit class: "self-end rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>

@@ -11,4 +11,4 @@ require("esbuild").build({
     '.png': 'file',
     '.svg': 'file'
   },
-}).catch(() => process.exit(1))
+})//.catch(() => process.exit(1))
