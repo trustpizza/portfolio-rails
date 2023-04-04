@@ -21,6 +21,7 @@
           </header>
 
           <div class="my-5">
+              <%= @post.thumbnail.attached? %>
               <%= @post.content %> 
           </div>
       </article>
