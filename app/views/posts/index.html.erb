@@ -5,7 +5,7 @@
 
   <div class="flex-grow w-full bg-white flex flex-col items-center p-2 rounded-md dark:bg-gray-300 shadow">
     <h1 class="font-bold text-3xl">Recent Posts</h1>
-    <div class="grid grid-cols-2 grid-rows-5 p-4">
+    <div class="grid w-full gap-2 justify-items-center md:grid-cols-2">
       <% @posts.each do |post| %>
         <%= render "post_link", post: post %>
       <% end %> 
