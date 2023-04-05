@@ -24,7 +24,9 @@
                     <ul>
                         <li class="px-3 py-3 text-sm font-medium flex items-center space-x-2 hover:bg-slate-400">
                             <%= link_to "About", "#", class: "", "data-action" => "dropdown#toggle" %>
-                        
+                        </li>
+                        <li class="px-3 py-3 text-sm font-medium flex items-center space-x-2 hover:bg-slate-400">
+                            <%= link_to "Projects", "#", class: "", "data-action" => "dropdown#toggle" %>
                         </li>
                         <li class="px-3 py-3 text-sm font-medium flex items-center space-x-2 hover:bg-slate-400">
                             <%= link_to "Blog", posts_path, class: "", "data-action" => "dropdown#toggle" %>
@@ -36,6 +38,9 @@
                 <ul class="flex flex-col items-end mt-4 font-medium text-lg text-black lg:flex-row lg:space-x-8 lg:mt-0 lg:justify-between">
                     <li>
                         <%= link_to "About", "#", class: "dark:text-blue-500 hover:underline" %>
+                    </li>
+                    <li>
+                        <%= link_to "Projects", "#", class: "dark:text-blue-500 hover:underline"%>
                     </li>
                     <li>
                         <%= link_to "Blog", posts_path, class: "dark:text-blue-500 hover:underline" %>
