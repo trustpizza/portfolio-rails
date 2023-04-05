@@ -3,11 +3,12 @@
 // ./bin/rails generate stimulus controllerName
 
 import { Application } from '@hotwired/stimulus'
-import Dropdown from 'stimulus-dropdown'
 
 const application = Application.start()
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import Dropdown from 'stimulus-dropdown'
 application.register("dropdown", Dropdown)
+

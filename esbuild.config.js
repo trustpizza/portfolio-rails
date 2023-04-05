@@ -1,4 +1,6 @@
 const path = require('path')
+const { copy } = require('esbuild-plugin-copy')
+
 
 require("esbuild").context({
   entryPoints: ["application.js"],
@@ -12,7 +14,21 @@ require("esbuild").context({
         '.png': 'file',
         '.svg': 'file'
       },
-  plugins: [],
+  plugins: [
+    copy({
+      resolveFrom: path.join(process.cwd(), 'public/assets'),
+      assets: [
+        {
+          from: [
+            './node_modules/tinymce/**/*.js',
+            './node_modules/tinymce/**/*.css'
+          ],
+          to: ['./tinymce'],
+          keepStructure: true
+        }
+      ]
+    })
+  ],
   minify: process.argv.includes("--minify")
 }).then(context => {
   if (process.argv.includes("--watch")) {
