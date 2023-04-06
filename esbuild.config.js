@@ -15,19 +15,7 @@ require("esbuild").context({
         '.svg': 'file'
       },
   plugins: [
-    copy({
-      resolveFrom: path.join(process.cwd(), 'public/assets'),
-      assets: [
-        {
-          from: [
-            './node_modules/tinymce/**/*.js',
-            './node_modules/tinymce/**/*.css'
-          ],
-          to: ['./tinymce'],
-          keepStructure: true
-        }
-      ]
-    })
+
   ],
   minify: process.argv.includes("--minify")
 }).then(context => {
