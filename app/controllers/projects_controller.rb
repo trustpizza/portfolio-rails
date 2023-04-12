@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-  http_basic_authenticate_with name: "admin", password:"123", only: %i[edit update destroy new]
-  
+  http_basic_authenticate_with name: "admin", password:"Xyn21328!", only: %i[edit update destroy new]
+
   # GET /projects or /projects.json
   def index
     @projects = Project.all
