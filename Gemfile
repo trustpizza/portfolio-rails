@@ -48,6 +48,9 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
+# Figaro for easy hiding env variables and auth
+gem "figaro"
+
 # Devise for Admin
 gem "devise"
 
