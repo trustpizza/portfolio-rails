@@ -1,15 +1,28 @@
  <div class="flex-grow flex flex-col justify-center items-center bg-gray-200 p-4">
-   <div class="flex-grow relative w-5/6 flex flex-col justify-center items-center bg-gray-200 p-4">
+   <div class="flex-grow relative w-3/4 flex flex-col justify-center items-center bg-gray-200 p-4">
       <div data-slideshow-target="card" class="max-h-full h-full absolute bg-white grid md:grid-cols-2 rounded-md dark:bg-gray-300 shadow">
         <%= image_tag "winter_hike_with_rosie.jpg", class: "self-center overflow-auto max-h-full rounded-tl-md rounded-bl-md relative" %>
-        <div class="flex flex-col p-10 flex-grow justify-center">
+        <div class="flex flex-col p-4 flex-grow justify-center">
           <!--
               Add a slide show of images on the left side with paragraphs about me ont the right, plan this out artistically
           -->
-          <h1 class="text-3xl">My Name is Axel Olsson</h1>
+          <h1 class="text-4xl">My Name is Axel Olsson</h1>
           <p class="font-semibold mb-5">Full Stack Software Developer</p>
-          <p>I studied Philosophy and Psychology at the University of Vermont where I discovered a passion for Problem Solving
-              Afterwords, I worked as a QA at <%= link_to "Epic", "https://www.epic.com/", target: "blank" %>, the leading Electronic Medical Records company in America</p>
+          <p class="text-lg">I am a self-taught full stack softare developer at <%= link_to "Precision Valley Communications", "https://www.pvc2.com/", target: "blank", class: "inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline" %> where I work on developing applications manipulating big data models.
+             <br> I have worked as in Software Quality Assurance at <%= link_to "Epic", "https://www.epic.com/", target: "blank", class:"inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline" %>, the leading Electronic Medical Records company in America
+          </p>
+
+          <ul class="flex flex-col w-full gap-2">
+            <li class="flex justify-evenly">
+              <%=image_tag "ruby.png", class:"h-24"%>
+              <%=image_tag "python.png", class:"h-24"%>
+            </li>
+            <li class="flex justify-around">
+              <%=image_tag "html.png", class:"h-24"%>
+              <%=image_tag "javascript.png", class:"h-24"%>     
+              <%=image_tag "css.png", class:"h-24"%>
+            </li>
+          </ul>
           <!--
           <p>I am a University of Vermont graduate who discovered a passion and love for Web Development and problem solving. <br></p>
           <p>I am a self taught web developer through TheOdinProject, an open source educational platform specializing in Ruby on Rails and Node.js. <br></p>
