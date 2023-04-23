@@ -1,15 +1,21 @@
  <div class="flex-grow flex flex-col justify-center items-center bg-gray-200 p-4">
-   <div class="flex-grow relative w-full flex flex-col justify-center items-center bg-gray-200 p-4">
-      <div data-slideshow-target="card" class="max-h-full h-full absolute w-full bg-white grid md:grid-cols-2 rounded-md dark:bg-gray-300 shadow">
+   <div class="flex-grow relative w-5/6 flex flex-col justify-center items-center bg-gray-200 p-4">
+      <div data-slideshow-target="card" class="max-h-full h-full absolute bg-white grid md:grid-cols-2 rounded-md dark:bg-gray-300 shadow">
         <%= image_tag "winter_hike_with_rosie.jpg", class: "self-center overflow-auto max-h-full rounded-tl-md rounded-bl-md relative" %>
-        <div class="">
+        <div class="flex flex-col p-10 flex-grow justify-center">
           <!--
               Add a slide show of images on the left side with paragraphs about me ont the right, plan this out artistically
           -->
+          <h1 class="text-3xl">My Name is Axel Olsson</h1>
+          <p class="font-semibold mb-5">Full Stack Software Developer</p>
+          <p>I studied Philosophy and Psychology at the University of Vermont where I discovered a passion for Problem Solving
+              Afterwords, I worked as a QA at <%= link_to "Epic", "https://www.epic.com/", target: "blank" %>, the leading Electronic Medical Records company in America</p>
+          <!--
           <p>I am a University of Vermont graduate who discovered a passion and love for Web Development and problem solving. <br></p>
           <p>I am a self taught web developer through TheOdinProject, an open source educational platform specializing in Ruby on Rails and Node.js. <br></p>
           <p>I work as a Software QA at Epic, the lead Electronic Health Record company in America. <br></p>
           <p>I am an avid outdoorsman, hiker, cyclist, skier, and backpacker. <br></p>
+          -->
         </div>
       </div>
     </div>
