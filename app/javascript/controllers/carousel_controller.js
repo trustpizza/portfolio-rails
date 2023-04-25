@@ -17,15 +17,15 @@ export default class extends Controller {
   }
 
   showCurrentSlide(index) {
-    console.log(index)
+    // console.log(index)
     this.cardTargets.forEach((card, i) => {
-      card.classList.toggle("hidden", i == index)
-      console.log(card,i)
+      card.classList.toggle("hidden", i !== index)
+      console.log(i == index)
     })
 
     this.buttonTargets.forEach((button, i) => {
       // button.toggleAttribute("active")
-      button.classList.toggle("active", i == this.index)
+      button.classList.toggle("active", i !== this.index)
     })
   }
 }
