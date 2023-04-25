@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 import Dropdown from 'stimulus-dropdown'
 application.register("dropdown", Dropdown)
 
+import Carousel from 'carousel_controller'
+application.register("carousel", Carousel)
+
