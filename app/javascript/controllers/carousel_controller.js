@@ -9,6 +9,7 @@ export default class extends Controller {
 
   show = () => {
     console.log('hi')
+    
     console.log(this.cardTargets)
   }
 }

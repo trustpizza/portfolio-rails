@@ -15,7 +15,7 @@
                 </button>
                 <div
                     data-dropdown-target="menu"
-                    class="hidden transition w-48 overflow-hidden bg-white rounded-md shadow absolute top-4 right-3 transform origin-top-right absolute right-0 mt-3"
+                    class="hidden border-black border transition w-48 overflow-hidden bg-white rounded-md shadow absolute top-4 right-3 transform origin-top-right absolute right-0 mt-3"
                     data-transition-enter-from="opacity-0 scale-95"
                     data-transition-enter-to="opacity-100 scale-100"
                     data-transition-leave-from="opacity-100 scale-100"
@@ -23,7 +23,7 @@
                 >
                     <ul>
                         <li class="px-3 py-3 text-sm font-medium flex items-center space-x-2 hover:bg-slate-400">
-                            <%= link_to "About", "#", class: "", "data-action" => "dropdown#toggle" %>
+                            <%= link_to "About", about_path, class: "", "data-action" => "dropdown#toggle" %>
                         </li>
                         <li class="px-3 py-3 text-sm font-medium flex items-center space-x-2 hover:bg-slate-400">
                             <%= link_to "Projects", projects_path, class: "", "data-action" => "dropdown#toggle" %>
