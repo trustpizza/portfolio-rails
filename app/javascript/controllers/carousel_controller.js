@@ -1,12 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-    connect() {
-      console.log("Hi")
-    }
+  static targets = ["card"]
 
-    show() {
-      alert("Hi")
-    }
+  connect() {
+    console.log("Hi")
   }
-  
+
+  show = () => {
+    console.log('hi')
+    console.log(this.cardTargets)
+  }
+}
+
+
