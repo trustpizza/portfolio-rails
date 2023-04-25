@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["card", "trigger"]
+  static targets = ["card", "button"]
   static values = { index: Number, default: 0 }
 
   static classes = ["hidden"]
@@ -11,16 +11,20 @@ export default class extends Controller {
     this.showCurrentSlide()
   }
 
-  test(event) {
-    this.index = event.target.getAttribute('data-carousel-index')
+  handleClick(event) {
+    this.index = parseInt(event.target.dataset.index)
     this.showCurrentSlide()
   }
 
   showCurrentSlide() {
-    this.cardTargets.forEach((card, index) => {
-      // card.hidden = index !== this.index
+    this.cardTargets.forEach((card, i) => {
+      card.classList.toggle("hidden", i == this.index)
       console.log(card)
     })
+
+    // this.buttonTargets.forEach((button, i) => {
+    //   button.classList.toggle("active", i == this.index)
+    // })
   }
 }
 
