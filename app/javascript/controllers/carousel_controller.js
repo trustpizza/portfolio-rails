@@ -8,23 +8,25 @@ export default class extends Controller {
   
   initialize() {
     this.index = this.indexValue
-    this.showCurrentSlide()
+    // this.showCurrentSlide()
   }
 
   handleClick(event) {
     this.index = parseInt(event.target.dataset.index)
-    this.showCurrentSlide()
+    this.showCurrentSlide(this.index)
   }
 
-  showCurrentSlide() {
+  showCurrentSlide(index) {
+    console.log(index)
     this.cardTargets.forEach((card, i) => {
-      card.classList.toggle("hidden", i == this.index)
-      console.log(card)
+      card.classList.toggle("hidden", i == index)
+      console.log(card,i)
     })
 
-    // this.buttonTargets.forEach((button, i) => {
-    //   button.classList.toggle("active", i == this.index)
-    // })
+    this.buttonTargets.forEach((button, i) => {
+      // button.toggleAttribute("active")
+      button.classList.toggle("active", i == this.index)
+    })
   }
 }
 
