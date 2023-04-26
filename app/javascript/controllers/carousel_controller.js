@@ -8,7 +8,7 @@ export default class extends Controller {
   
   initialize() {
     this.index = this.indexValue
-    // this.showCurrentSlide()
+    this.showCurrentSlide(this.index)
   }
 
   handleClick(event) {
@@ -16,11 +16,23 @@ export default class extends Controller {
     this.showCurrentSlide(this.index)
   }
 
+  next() {
+    /*
+
+    */
+    this.index++
+    this.showCurrentSlide()
+  }
+
+  previous() {
+    this.index--
+    this.showCurrentSlide()
+  }
+
   showCurrentSlide(index) {
-    // console.log(index)
+    
     this.cardTargets.forEach((card, i) => {
-      card.classList.toggle("hidden", i !== index)
-      console.log(i == index)
+      card.classList.toggle("hidden", i !== this.index)
     })
 
     this.buttonTargets.forEach((button, i) => {
