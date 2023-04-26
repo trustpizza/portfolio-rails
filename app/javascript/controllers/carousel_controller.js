@@ -9,6 +9,10 @@ export default class extends Controller {
   initialize() {
     this.index = this.indexValue
     this.showCurrentSlide(this.index)
+
+    setInterval(() => {
+      // this.next() // Uncomment once ready
+    }, 1000 * 4);
   }
 
   handleClick(event) {
