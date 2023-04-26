@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["card", "button"]
+  static targets = ["card", "button", "bubble"]
   static values = { index: Number, default: 0 }
 
   static classes = ["hidden"]
@@ -17,15 +17,22 @@ export default class extends Controller {
   }
 
   next() {
-    /*
+    if ((this.index + 1) > (this.cardTargets.length - 1)) {
+      this.index = 0
+    } else {
+      this.index++
+    }
 
-    */
-    this.index++
     this.showCurrentSlide()
   }
 
   previous() {
-    this.index--
+    if ((this.index -1 ) < 0) {
+      this.index = this.cardTargets.length - 1
+    } else {
+      this.index--
+    }
+
     this.showCurrentSlide()
   }
 
@@ -38,6 +45,10 @@ export default class extends Controller {
     this.buttonTargets.forEach((button, i) => {
       // button.toggleAttribute("active")
       button.classList.toggle("active", i !== this.index)
+    })
+
+    this.bubbleTargets.forEach((bubble, i) => {
+      bubble.classList.toggle("bg-blue-200", i == this.index)
     })
   }
 }
